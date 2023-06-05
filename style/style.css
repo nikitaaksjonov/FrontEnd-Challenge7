@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 125vh;
+    background-color:hsl(244, 38%, 16%);
+    border-radius: 15px;
+    min-height: 350px;
+    overflow: hidden;
+    margin: 2rem;
+}
+main >*{
+    width: 55%;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card{           
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding-left: 50px;
+    width: 85%;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.card h1{
+    font-size: 30px;
+}
+.card h1 span{
+    color: hsl(277, 64%, 61%);
+}
+.card p{
+    color: hsla(0, 0%, 100%, 0.65);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+}
+.card ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.card ul li{
+    color: hsla(0, 0%, 100%, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+.card ul li p{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.card ul li span{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 9px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.header{
+    
+    background: linear-gradient(hsla(277, 81%, 29%, 0.65), hsla(277, 81%, 29%, 0.65)),url('../images/image-header-desktop.jpg');
+    background-size:cover;
+}
+@media (max-width: 779px){
+    main{
+        flex-direction: column-reverse;
+        max-width: 250px;
+        min-height: 600px;
+    }
+    main >*{
+        width: 100%;
+    }
+    .card-container{
+        height: 70%;
+        align-items: center;
+    }
+    .card{
+        text-align: center;
+        padding: 10px;
+    }
+    .card p{
+        margin-right: 0;
+        width: 100%;
+        font-size: 11px;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .header{
+        height: 30%;
+    }
+    .card ul{
+        flex-direction: column;
+    }
+}
